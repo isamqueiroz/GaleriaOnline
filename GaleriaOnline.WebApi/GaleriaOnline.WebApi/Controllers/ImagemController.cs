@@ -19,7 +19,7 @@ namespace GaleriaOnline.WebApi.Controllers
             _env = env;
         }
 
-        [HttpGet("(id)")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetImagemById(int id) // Busca uma imagem pelo ID
         {
             var imagem = await _repository.GetByIdAsync(id); // Chama o repositório para buscar a imagem
@@ -74,7 +74,7 @@ namespace GaleriaOnline.WebApi.Controllers
             return CreatedAtAction(nameof(GetImagemById), new { id = imagem.Id }, imagem);
         }
 
-        [HttpPut("(id)")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> AtualizarImagem(int id, PutImagemDto imagemAtualizada)
         {
             var imagem = await _repository.GetByIdAsync(id);
@@ -85,7 +85,7 @@ namespace GaleriaOnline.WebApi.Controllers
 
             if (imagemAtualizada.Arquivo == null && string.IsNullOrWhiteSpace(imagemAtualizada.Nome))
             {
-                return BadRequest("Pelo menos um dos campos tem que ser preenchido");
+                return BadRequest("Pelo menos um dos campos tem que ser preenchido.");
             }
 
             if (!string.IsNullOrWhiteSpace(imagemAtualizada.Nome))
@@ -94,13 +94,13 @@ namespace GaleriaOnline.WebApi.Controllers
             }
 
             var caminhoAntigo = Path.Combine
-             (Directory.GetCurrentDirectory(),
-             imagem.Caminho.Replace("/",
-             Path.DirectorySeparatorChar.ToString()));
+                (Directory.GetCurrentDirectory(),
+                imagem.Caminho.Replace("/",
+                Path.DirectorySeparatorChar.ToString()));
 
-            if(imagemAtualizada.Arquivo != null && imagemAtualizada.Arquivo.Length > 0)
+            if (imagemAtualizada.Arquivo != null && imagemAtualizada.Arquivo.Length > 0)
             {
-                if (System.IO.File.Exists(caminhoAntigo)) 
+                if (System.IO.File.Exists(caminhoAntigo))
                 {
                     System.IO.File.Delete(caminhoAntigo);
                 }
@@ -111,13 +111,12 @@ namespace GaleriaOnline.WebApi.Controllers
                 var pastaRelativa = "wwwroot/imagens";
                 var caminhoPasta = Path.Combine(Directory.GetCurrentDirectory(), pastaRelativa);
 
-                var caminhoCompleto = Path.Combine(caminhoPasta, nomeArquivo);
-
                 if (!Directory.Exists(caminhoPasta))
                 {
                     Directory.CreateDirectory(caminhoPasta);
                 }
 
+                var caminhoCompleto = Path.Combine(caminhoPasta, nomeArquivo);
 
                 using (var stream = new FileStream(caminhoCompleto, FileMode.Create))
                 {
@@ -125,21 +124,17 @@ namespace GaleriaOnline.WebApi.Controllers
                 }
 
                 imagem.Caminho = Path.Combine(pastaRelativa, nomeArquivo).Replace("\\", "/");
-
-                var atualizado = await _repository.UpdateAsync(imagem);
-                if(!atualizado)
-                {
-                    return StatusCode(500, "Erro ao atualizar imagem");
-
-                }
-
-                return Ok(imagem);
-
             }
 
+            var atualizado = await _repository.UpdateAsync(imagem);
+            if (!atualizado)
+            {
+                return StatusCode(500, "Erro ao atualizar a imagem");
+            }
+            return Ok(imagem);
         }
 
-        [HttpDelete("(id)")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeletarImagem(int id) // Deleta uma imagem pelo ID
         {
             var imagem = await _repository.GetByIdAsync(id); // Busca a imagem pelo ID

@@ -171,3 +171,4 @@ C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.We
 C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\obj\Debug\net8.0\GaleriaOnline.WebApi.pdb
 C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\obj\Debug\net8.0\GaleriaOnline.WebApi.genruntimeconfig.cache
 C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\obj\Debug\net8.0\ref\GaleriaOnline.WebApi.dll
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\bin\Debug\net8.0\GaleriaOnline.WebApi.staticwebassets.runtime.json
