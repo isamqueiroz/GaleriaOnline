@@ -1,0 +1,6 @@
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\42797bd3-b549-496d-9baa-651855a45c27.png
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\5aaefba3-702b-49a8-86e6-211277c33dcc.png
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\915de270-7453-4dc7-b87b-0f687b8d1edf.png
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\a1013156-5733-41b6-9dde-71cbe790bc27.png
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\d989ffac-79eb-4b3b-ad88-43a6cb82502b.gif
+C:\Users\50178746827\Desktop\GaleriaOnline\GaleriaOnline.WebApi\GaleriaOnline.WebApi\wwwroot\imagens\eb85630b-db59-4a11-9f47-774cda5cc9a3.png

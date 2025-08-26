@@ -1,0 +1,62 @@
+/* Fundo */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: monospace;
+}
+
+/* Container centralizado */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+background: #EEAECA;
+background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(182, 97, 194, 1) 100%);
+  text-align: center;
+}
+
+.homeTitulo{
+    margin-bottom: 30px;
+}
+
+/* Textos */
+h1 {
+  font-size: 56px;
+  font-weight: 400;
+  color: #4a6d80;
+  margin: 0;
+}
+
+h2 {
+    font-family: JetBrains Mono;
+  font-size: 36px;
+  font-weight: 600;
+  color: #4a6d80;
+}
+
+
+.botao {
+background-color: #6B4950;
+border: none;
+color: white;
+width: 15%;
+height: 40px;
+
+border-radius: 6px;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+font-size: 16px;
+}
+
+@media screen and (max-width : 765px) {
+    .botao{
+        font-size: 14px;
+    }
+}
+
+.btn:hover {
+  background-color:#6B4950;
+}
